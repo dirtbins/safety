@@ -122,5 +122,5 @@ MainCard.propTypes = {
   content: PropTypes.bool,
   children: PropTypes.node,
 };
-
+MainCard.displayName = "MainCard";
 export default MainCard;
