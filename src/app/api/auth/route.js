@@ -5,7 +5,13 @@ const prisma = new PrismaClient();
 
 async function checkCredentials(email, password) {
   // Creating a new record
-
+  await prisma.user.create({
+    data: {
+      name: "Rich Ricj",
+      email: "test@oshportal.com",
+      password: "Sweetnovember",
+    },
+  });
   const users = await prisma.user.findMany({
     where: {
       email,

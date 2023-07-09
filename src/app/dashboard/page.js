@@ -144,7 +144,7 @@ export default function MiniDrawer() {
       setLoading(true);
       setTimeout(() => {
         logout();
-      }, 3000);
+      }, 1000);
     } else if (iconName == "Dashboard") {
     } else {
       setTitle("Limited Access");

@@ -101,7 +101,7 @@ export default function SignInSide() {
 
       setTimeout(function () {
         toDashboard();
-      }, 5000);
+      }, 3000);
     } else {
       setLoading(false);
       setTitle("Login Error");
