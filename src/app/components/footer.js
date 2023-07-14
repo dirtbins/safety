@@ -47,8 +47,6 @@ export default function Footer() {
         >
           <Container maxWidth="sm">
             <Typography variant="body1" color="text.secondary" align="center">
-              OSHPORTAL in Partnership with Moore Automation Limited
-              <br />
               OSHPORTAL is a subsidiary of OSHSOLUTIONS
             </Typography>
             <Copyright />
