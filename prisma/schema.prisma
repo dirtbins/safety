@@ -16,3 +16,10 @@ model user {
   name       String
   password String?
 }
+
+model project {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  location       String
+  progress String
+}

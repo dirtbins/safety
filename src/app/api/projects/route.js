@@ -3,7 +3,7 @@ const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
-async function checkCredentials(email, password) {
+async function listProjects() {
   // Creating a new record
   // await prisma.project.create({
   //   data: {
@@ -12,25 +12,19 @@ async function checkCredentials(email, password) {
   //     progress: "49",
   //   },
   // });
-  const users = await prisma.user.findMany({
-    where: {
-      email,
-      password,
-    },
-  });
+  const projects = await prisma.project.findMany();
 
-  return users;
+  return projects;
 }
 export const config = {
   api: {
     bodyParser: process.env.NODE_ENV !== "production",
   },
 };
-export async function POST(request) {
+export async function GET() {
   //   const user = await request.json();
-  const user = await request.json();
 
-  const res = await checkCredentials(user.email, user.password)
+  const res = await listProjects()
     .then((result) => {
       return NextResponse.json(result);
     })
