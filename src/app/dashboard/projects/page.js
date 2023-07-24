@@ -22,6 +22,7 @@ export default function AccessibleTable() {
     const fetchProjects = async () => {
       const response = await fetch("/api/projects", {
         method: "GET",
+        cache: "no-cache",
       });
       return response.json();
     };
