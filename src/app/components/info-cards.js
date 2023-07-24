@@ -45,8 +45,8 @@ const Info = () => {
           <AnalyticEcommerce
             title="Total Invoices"
             count="$13,078"
-            percentage={27.4}
-            color="error"
+            percentage={50.6}
+            color="warning"
             extra="$20,395"
           />
         </Grid>

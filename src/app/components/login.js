@@ -66,7 +66,7 @@ export default function SignInSide() {
 
   function toDashboard() {
     router.push("/dashboard");
-    setLoading(false);
+    // setLoading(false);
   }
   const [showToast, setShowToast] = useState({
     open: false,
@@ -96,7 +96,6 @@ export default function SignInSide() {
       return response.json();
     });
     if (response.length > 0) {
-      console.log(response);
       Cookies.set("currentUser", JSON.stringify(response));
 
       setTimeout(function () {
