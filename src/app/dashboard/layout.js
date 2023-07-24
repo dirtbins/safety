@@ -342,6 +342,8 @@ export default function MiniDrawer() {
             <Fragment>
               <Info />
               <IncidentLog />
+              <hr />
+              <Projects />
             </Fragment>
           )}
           {pathname === "/dashboard/projects" && <Projects />}

@@ -10,7 +10,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-import { Avatar, Chip, TableSortLabel } from "@mui/material";
+import { Avatar, Chip, Grid, TableSortLabel, Typography } from "@mui/material";
 import styled from "styled-components";
 
 export default function CollapsibleTable() {
@@ -34,82 +34,93 @@ export default function CollapsibleTable() {
     },
   }));
   return (
-    <Box sx={{ overflow: "auto" }}>
-      <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>
-                <TableSortLabel></TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
-                <TableSortLabel>Date</TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
-                <TableSortLabel>Locatiton</TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
-                <TableSortLabel>Staff ID</TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
-                <TableSortLabel>Incident</TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
-                <TableSortLabel>Priority</TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell align={"right"}></StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow hover>
-              <TableCell>
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Avatar
-                    sx={{
-                      height: 42,
-                      width: 42,
-                      backgroundColor: "dark.main",
-                    }}
-                  >
-                    RT
-                  </Avatar>
-                  <Box sx={{ ml: 1 }}></Box>
-                </Box>
-              </TableCell>
-              <TableCell>05/07/2023</TableCell>
-              <TableCell>Site B29F</TableCell>
-              <TableCell>Richard Taylor (789966)</TableCell>
-              <TableCell>Cut to index finger</TableCell>
-              <TableCell>
-                <Chip label="Low" color="primary" />
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Avatar
-                    sx={{
-                      height: 42,
-                      width: 42,
-                      backgroundColor: "dark.main",
-                    }}
-                  >
-                    TA
-                  </Avatar>
-                  <Box sx={{ ml: 1 }}></Box>
-                </Box>
-              </TableCell>
-              <TableCell>03/06/2023</TableCell>
-              <TableCell>Site B29F</TableCell>
-              <TableCell>Timothy Andrews (763792)</TableCell>
-              <TableCell>Sprained ankle</TableCell>
-              <TableCell>
-                <Chip label="Low" color="primary" />
-              </TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
+    <React.Fragment>
+      <br />
+
+      <Grid item xs={12} sx={{ mb: -2.25 }}>
+        <Typography color="#1976d2" variant="h6">
+          Log
+        </Typography>
+      </Grid>
+      <br />
+
+      <Box sx={{ overflow: "auto" }}>
+        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>
+                  <TableSortLabel></TableSortLabel>
+                </StyledTableCell>
+                <StyledTableCell>
+                  <TableSortLabel>Date</TableSortLabel>
+                </StyledTableCell>
+                <StyledTableCell>
+                  <TableSortLabel>Locatiton</TableSortLabel>
+                </StyledTableCell>
+                <StyledTableCell>
+                  <TableSortLabel>Staff ID</TableSortLabel>
+                </StyledTableCell>
+                <StyledTableCell>
+                  <TableSortLabel>Incident</TableSortLabel>
+                </StyledTableCell>
+                <StyledTableCell>
+                  <TableSortLabel>Priority</TableSortLabel>
+                </StyledTableCell>
+                <StyledTableCell align={"right"}></StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow hover>
+                <TableCell>
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <Avatar
+                      sx={{
+                        height: 42,
+                        width: 42,
+                        backgroundColor: "dark.main",
+                      }}
+                    >
+                      RT
+                    </Avatar>
+                    <Box sx={{ ml: 1 }}></Box>
+                  </Box>
+                </TableCell>
+                <TableCell>05/07/2023</TableCell>
+                <TableCell>Site B29F</TableCell>
+                <TableCell>Richard Taylor (789966)</TableCell>
+                <TableCell>Cut to index finger</TableCell>
+                <TableCell>
+                  <Chip label="Low" color="primary" />
+                </TableCell>
+              </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <Avatar
+                      sx={{
+                        height: 42,
+                        width: 42,
+                        backgroundColor: "dark.main",
+                      }}
+                    >
+                      TA
+                    </Avatar>
+                    <Box sx={{ ml: 1 }}></Box>
+                  </Box>
+                </TableCell>
+                <TableCell>03/06/2023</TableCell>
+                <TableCell>Site B29F</TableCell>
+                <TableCell>Timothy Andrews (763792)</TableCell>
+                <TableCell>Sprained ankle</TableCell>
+                <TableCell>
+                  <Chip label="Low" color="primary" />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </Box>
       </Box>
-    </Box>
+    </React.Fragment>
   );
 }

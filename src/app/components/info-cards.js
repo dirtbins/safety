@@ -24,8 +24,10 @@ const Info = () => {
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <AnalyticEcommerce
             title="Staff Under Me"
-            count="17"
-            percentage={70.5}
+            count="13"
+            percentage={60}
+            isLoss
+            color="warning"
             extra="8,900"
           />
         </Grid>
