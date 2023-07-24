@@ -27,7 +27,7 @@ const Info = () => {
             count="13"
             percentage={60}
             isLoss
-            color="warning"
+            color="error"
             extra="8,900"
           />
         </Grid>
