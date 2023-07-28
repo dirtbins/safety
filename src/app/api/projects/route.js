@@ -3,7 +3,8 @@ const { PrismaClient } = require("@prisma/client");
 import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient();
-export const revalidate = 1; //revalidate api every 1 second
+export const revalidate = 0; //revalidate api every 1 second
+export const dynamic = "force-dynamic";
 async function listProjects() {
   // Creating a new record
   // await prisma.project.create({
@@ -15,10 +16,6 @@ async function listProjects() {
   // });
 
   const projects = await prisma.project.findMany();
-
-  const path = request.nextUrl.searchParams.get("path") || "/";
-
-  revalidatePath(path);
 
   return projects;
 }
