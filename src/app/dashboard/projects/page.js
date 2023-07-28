@@ -28,7 +28,6 @@ export default function AccessibleTable() {
     };
 
     fetchProjects().then((response) => {
-      console.log(response);
       setRows(response);
     });
   }, []);
