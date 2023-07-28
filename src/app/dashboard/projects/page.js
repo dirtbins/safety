@@ -48,8 +48,12 @@ export default function AccessibleTable() {
           <TableHead sx={{ backgroundColor: "#000000DE" }}>
             <TableRow>
               <TableCell sx={{ color: "white" }}>Project Name/Alias</TableCell>
-              <TableCell align="center">Location</TableCell>
-              <TableCell align="right">Progress</TableCell>
+              <TableCell sx={{ color: "white" }} align="center">
+                Location
+              </TableCell>
+              <TableCell sx={{ color: "white" }} align="right">
+                Progress
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
